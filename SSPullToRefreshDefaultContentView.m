@@ -22,15 +22,15 @@
 		
 		_statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 14.0f, width, 20.0f)];
 		_statusLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		_statusLabel.font = [UIFont boldSystemFontOfSize:14.0f];
-		_statusLabel.textColor = [UIColor blackColor];
+		_statusLabel.font = [UIFont systemFontOfSize:14.0f];
+		_statusLabel.textColor = [UIColor grayColor];
 		_statusLabel.backgroundColor = [UIColor clearColor];
 		_statusLabel.textAlignment = UITextAlignmentCenter;
 		[self addSubview:_statusLabel];
 		
 		_lastUpdatedAtLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 34.0f, width, 20.0f)];
 		_lastUpdatedAtLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		_lastUpdatedAtLabel.font = [UIFont systemFontOfSize:12.0f];
+		_lastUpdatedAtLabel.font = [UIFont systemFontOfSize:14.0f];
 		_lastUpdatedAtLabel.textColor = [UIColor lightGrayColor];
 		_lastUpdatedAtLabel.backgroundColor = [UIColor clearColor];
 		_lastUpdatedAtLabel.textAlignment = UITextAlignmentCenter;
@@ -50,7 +50,7 @@
 	switch (state) {
 		case SSPullToRefreshViewStateReady: {
 			_statusLabel.text = @"Release to refresh...";
-			[_activityIndicatorView stopAnimating];
+			[_activityIndicatorView startAnimating];
 			break;
 		}
 			
