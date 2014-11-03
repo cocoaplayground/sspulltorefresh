@@ -75,7 +75,7 @@
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		dateFormatter = [[NSDateFormatter alloc] init];
-		dateFormatter.timeStyle = NSDateFormatterMediumStyle;
+		dateFormatter.timeStyle = NSDateFormatterShortStyle;
 
 	});
 	_lastUpdatedAtLabel.text = [NSString stringWithFormat:@"Last Updated: %@", [dateFormatter stringFromDate:date]];
