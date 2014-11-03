@@ -206,21 +206,21 @@
 #pragma mark - Private
 
 - (void)_setContentInsetTop:(CGFloat)topInset {
-	_topInset = topInset;
+	// _topInset = topInset;
 	
-	// Default to the scroll view's initial content inset
-	UIEdgeInsets inset = _defaultContentInset;
+	// // Default to the scroll view's initial content inset
+	// UIEdgeInsets inset = _defaultContentInset;
 	
-	// Add the top inset
-	inset.top += _topInset;
+	// // Add the top inset
+	// inset.top += _topInset;
 	
-	// Don't set it if that is already the current inset
-	if (UIEdgeInsetsEqualToEdgeInsets(_scrollView.contentInset, inset)) {
-		return;
-	}
+	// // Don't set it if that is already the current inset
+	// if (UIEdgeInsetsEqualToEdgeInsets(_scrollView.contentInset, inset)) {
+	// 	return;
+	// }
 	
-	// Update the content inset
-	_scrollView.contentInset = inset;
+	// // Update the content inset
+	// _scrollView.contentInset = inset;
 }
 
 
